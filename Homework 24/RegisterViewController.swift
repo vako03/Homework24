@@ -20,7 +20,8 @@ class RegisterViewController: UIViewController {
         passwordTextField.layer.cornerRadius = 18
         registerButton.layer.borderWidth = 2
         registerButton.layer.cornerRadius = 18
-        registerButton.addTarget(self, action: #selector(registerUser), for: .touchUpInside)    }
+        registerButton.addTarget(self, action: #selector(registerUser), for: .touchUpInside)
+    }
     @objc func registerUser() {
         let username = usernameTextField.text!
         let password = passwordTextField.text!

@@ -62,6 +62,9 @@
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Regster"/>
+                                <connections>
+                                    <action selector="onRegister:" destination="BYZ-38-t0r" eventType="touchUpInside" id="D6u-t8-JaM"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="movie" translatesAutoresizingMaskIntoConstraints="NO" id="NiW-Sm-thZ">
                                 <rect key="frame" x="76" y="183" width="240" height="105"/>
@@ -113,7 +116,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="38" translatesAutoresizingMaskIntoConstraints="NO" id="A7A-Jg-tzJ">
                                 <rect key="frame" x="20" y="385" width="353" height="122"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aSR-9R-iuB">
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aSR-9R-iuB">
                                         <rect key="frame" x="0.0" y="0.0" width="353" height="42"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="42" id="csI-vp-Wtj"/>
@@ -121,7 +124,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mTZ-Xd-bFb">
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mTZ-Xd-bFb">
                                         <rect key="frame" x="0.0" y="80" width="353" height="42"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="42" id="zs1-p9-IrQ"/>
@@ -174,7 +177,7 @@
                     </view>
                     <connections>
                         <outlet property="passwordTextField" destination="mTZ-Xd-bFb" id="jdz-Sq-ECb"/>
-                        <outlet property="registerButton" destination="h8Y-6c-QGb" id="uIG-wm-ctV"/>
+                        <outlet property="registerButton" destination="h8Y-6c-QGb" id="Vww-65-itf"/>
                         <outlet property="usernameTextField" destination="aSR-9R-iuB" id="fYn-bu-ynI"/>
                     </connections>
                 </viewController>
