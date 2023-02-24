@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home View Controller-->
+        <scene sceneID="10v-y1-Tnh">
+            <objects>
+                <viewController storyboardIdentifier="HomeViewController" id="ade-Oj-DHG" customClass="HomeViewController" customModule="davaleba24" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tSv-5e-h6L">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="EeU-Li-VGH">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="i2y-Cd-EiG">
+                                <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
+                                <color key="color" red="1" green="0.63747107979999995" blue="0.38748413320000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="EeU-Li-VGH" firstAttribute="leading" secondItem="mxm-El-ZIH" secondAttribute="leading" id="4Ot-zg-OcW"/>
+                            <constraint firstItem="mxm-El-ZIH" firstAttribute="bottom" secondItem="EeU-Li-VGH" secondAttribute="bottom" id="C2y-jG-QOw"/>
+                            <constraint firstItem="i2y-Cd-EiG" firstAttribute="centerX" secondItem="tSv-5e-h6L" secondAttribute="centerX" id="E6A-KE-Qp5"/>
+                            <constraint firstItem="EeU-Li-VGH" firstAttribute="top" secondItem="mxm-El-ZIH" secondAttribute="top" id="M4L-DV-h8H"/>
+                            <constraint firstItem="i2y-Cd-EiG" firstAttribute="centerY" secondItem="tSv-5e-h6L" secondAttribute="centerY" id="X4B-4I-gE1"/>
+                            <constraint firstItem="mxm-El-ZIH" firstAttribute="trailing" secondItem="EeU-Li-VGH" secondAttribute="trailing" id="ahD-uI-Jdp"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="mxm-El-ZIH"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="house" catalog="system" id="RaB-1T-GPn"/>
+                    <navigationItem key="navigationItem" id="tmj-QX-Qc0"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="spiner" destination="i2y-Cd-EiG" id="M1a-eH-rLX"/>
+                        <outlet property="tableView" destination="EeU-Li-VGH" id="Wi5-Ce-6rc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iGR-Io-40K" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="935" y="82"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="QfK-nB-gG3">
+            <objects>
+                <navigationController restorationIdentifier="HomeViewControllerNav" storyboardIdentifier="HomeViewControllerNav" automaticallyAdjustsScrollViewInsets="NO" id="FEq-R2-vKd" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Q2d-f3-2Eg">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ade-Oj-DHG" kind="relationship" relationship="rootViewController" id="n3T-kX-dfz"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8Ic-Lc-4sU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="169.56521739130437" y="77.678571428571431"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="house" catalog="system" width="64" height="54"/>
+    </resources>
+</document>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Register View Controller-->
+        <scene sceneID="0lF-iN-ijg">
+            <objects>
+                <viewController storyboardIdentifier="RegisterViewController" id="5zg-zR-r4i" customClass="RegisterViewController" customModule="davaleba24" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZPR-bC-Ab7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" id="V3f-aC-qjz">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="38" translatesAutoresizingMaskIntoConstraints="NO" id="vju-zT-ohp">
+                                        <rect key="frame" x="20" y="385" width="374" height="122"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4KY-rR-31g">
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="42"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="42" id="7GI-rG-D7d"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="O2l-Tm-PvO">
+                                                <rect key="frame" x="0.0" y="80" width="374" height="42"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="42" id="Nad-6Y-rCz"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n8E-Qg-l9W">
+                                        <rect key="frame" x="80" y="745" width="254" height="40"/>
+                                        <color key="backgroundColor" red="0.071736862390000003" green="0.087204649879999999" blue="0.11600964480000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="SIV-uy-tFa"/>
+                                        </constraints>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create Account" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ues-qD-L1Q">
+                                        <rect key="frame" x="80" y="86" width="254" height="42"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="42" id="Mii-h2-Nr7"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="movie-icon-app" translatesAutoresizingMaskIntoConstraints="NO" id="2Yu-D1-9gb">
+                                        <rect key="frame" x="80" y="202" width="254" height="143"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.15944014579999999" green="0.2450819588" blue="0.21236018970000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="vju-zT-ohp" firstAttribute="centerX" secondItem="2Yu-D1-9gb" secondAttribute="centerX" id="2Za-I0-Muf"/>
+                                    <constraint firstItem="vju-zT-ohp" firstAttribute="top" secondItem="2Yu-D1-9gb" secondAttribute="bottom" constant="40" id="8kz-O8-WfB"/>
+                                    <constraint firstItem="VGe-kZ-LO4" firstAttribute="bottom" secondItem="n8E-Qg-l9W" secondAttribute="bottom" constant="77" id="Flg-KS-Mp0"/>
+                                    <constraint firstItem="ues-qD-L1Q" firstAttribute="top" secondItem="VGe-kZ-LO4" secondAttribute="top" constant="42" id="Kjs-bx-tNj"/>
+                                    <constraint firstItem="vju-zT-ohp" firstAttribute="top" secondItem="V3f-aC-qjz" secondAttribute="top" constant="385" id="Nt1-kA-oBE"/>
+                                    <constraint firstItem="2Yu-D1-9gb" firstAttribute="top" secondItem="ues-qD-L1Q" secondAttribute="bottom" constant="74" id="SsQ-hm-gvA"/>
+                                    <constraint firstItem="n8E-Qg-l9W" firstAttribute="leading" secondItem="2Yu-D1-9gb" secondAttribute="leading" id="VNC-oQ-rLL"/>
+                                    <constraint firstItem="VGe-kZ-LO4" firstAttribute="trailing" secondItem="vju-zT-ohp" secondAttribute="trailing" constant="20" id="Xji-ED-Lli"/>
+                                    <constraint firstItem="ues-qD-L1Q" firstAttribute="leading" secondItem="2Yu-D1-9gb" secondAttribute="leading" id="b8w-ay-xR7"/>
+                                    <constraint firstItem="n8E-Qg-l9W" firstAttribute="trailing" secondItem="2Yu-D1-9gb" secondAttribute="trailing" id="d3u-JE-UUc"/>
+                                    <constraint firstItem="ues-qD-L1Q" firstAttribute="leading" secondItem="VGe-kZ-LO4" secondAttribute="leading" constant="80" id="n0x-3n-KYq"/>
+                                    <constraint firstItem="vju-zT-ohp" firstAttribute="centerX" secondItem="ues-qD-L1Q" secondAttribute="centerX" id="qul-WY-Upf"/>
+                                    <constraint firstItem="vju-zT-ohp" firstAttribute="leading" secondItem="VGe-kZ-LO4" secondAttribute="leading" constant="20" id="tUC-EN-Eqq"/>
+                                </constraints>
+                                <viewLayoutGuide key="safeArea" id="VGe-kZ-LO4"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="VJD-kb-yYo"/>
+                    </view>
+                    <connections>
+                        <outlet property="passwordTextField" destination="O2l-Tm-PvO" id="b5q-jD-3Xh"/>
+                        <outlet property="registerButton" destination="n8E-Qg-l9W" id="AZ7-Ac-ViP"/>
+                        <outlet property="usernameTextField" destination="4KY-rR-31g" id="8ho-yi-Uwa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="U4P-aP-SLE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="132" y="120"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="movie-icon-app" width="16" height="16"/>
+    </resources>
+</document>
