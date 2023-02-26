@@ -56,6 +56,9 @@
                         <fontDescription key="fontDescription" type="system" pointSize="22"/>
                         <color key="tintColor" red="1" green="0.63747107979999995" blue="0.38748413320000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <state key="normal" image="heart.fill" catalog="system"/>
+                        <connections>
+                            <action selector="favoriteButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="RfP-9Z-YdO"/>
+                        </connections>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XND-IR-uK7">
                         <rect key="frame" x="50" y="257.5" width="150" height="25"/>

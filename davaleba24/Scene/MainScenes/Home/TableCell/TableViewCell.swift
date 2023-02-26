@@ -8,9 +8,14 @@
 
 import UIKit
 
+protocol TableViewCellDelegate {
+    func add(title: String, description: String, imageURL: UIImageView, publisheddate: String)
+    func delete(title: String, description: String, imageURL: UIImageView, publisheddate: String)
+}
+
 class TableViewCell: UITableViewCell {
     let session = URLSession.shared
-    
+   
     @IBOutlet private weak var movieImage: UIImageView!
     @IBOutlet private weak var favoriteButton: UIButton!
     @IBOutlet private weak var nameLable: UILabel!
@@ -18,6 +23,8 @@ class TableViewCell: UITableViewCell {
     @IBOutlet private weak var realaisDate: UILabel!
     @IBOutlet private weak var ratingStar: UILabel!
 
+    var delegate: TableViewCellDelegate?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -70,6 +77,31 @@ class TableViewCell: UITableViewCell {
          self.printStars(array: [arr/2])
         satimage(name: Item.poster_path)
      }
-    
-    
+    func config(wirt Item:Information){
+          nameLable.text = Item.title
+        descriptionLable.text = Item.description
+         realaisDate.text = Item.publisheddate
+   if let imageData = Item.imageURL.image?.jpegData(compressionQuality: 1.0) {
+       let movieImage = UIImage(data: imageData)
+    self.movieImage.image = movieImage
+       favoriteButton.isHidden = true
+   }
+   
+   else {
+       
+   }
+
 }
+    @IBAction func favoriteButton(_ sender:UIButton) {
+        if sender.isSelected{
+            sender.isSelected = false
+            print("Unselected")
+        }
+        else{
+            sender.isSelected = true
+            info.append(Information(title: nameLable.text!, description: descriptionLable.text!, imageURL: movieImage!, publisheddate: realaisDate.text!))
+                print("selected")
+        }
+    }
+}
+

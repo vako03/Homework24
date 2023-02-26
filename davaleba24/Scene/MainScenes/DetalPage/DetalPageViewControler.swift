@@ -30,5 +30,8 @@ class DetalPageViewControler: UIViewController {
                     self.image.image = UIImage(data: imageData)
         }
      }
+        
     }
+
+    
 }

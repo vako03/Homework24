@@ -35,6 +35,9 @@
 		C35142C729A91063007E0A77 /* FavoriteViewControler.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C35142C629A91063007E0A77 /* FavoriteViewControler.storyboard */; };
 		C35142CA29A91075007E0A77 /* UserViewControler.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35142C929A91075007E0A77 /* UserViewControler.swift */; };
 		C35142CC29A9107A007E0A77 /* UserViewControler.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C35142CB29A9107A007E0A77 /* UserViewControler.storyboard */; };
+		C3E4456B29AAC08D00E3CE65 /* infoSruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E4456A29AAC08D00E3CE65 /* infoSruct.swift */; };
+		C3E4457129AAC10800E3CE65 /* FavoriteDatasorce.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E4457029AAC10800E3CE65 /* FavoriteDatasorce.swift */; };
+		C3E4457429AAC35000E3CE65 /* FavoriteModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E4457329AAC35000E3CE65 /* FavoriteModelView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +83,9 @@
 		C35142C629A91063007E0A77 /* FavoriteViewControler.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FavoriteViewControler.storyboard; sourceTree = "<group>"; };
 		C35142C929A91075007E0A77 /* UserViewControler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewControler.swift; sourceTree = "<group>"; };
 		C35142CB29A9107A007E0A77 /* UserViewControler.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserViewControler.storyboard; sourceTree = "<group>"; };
+		C3E4456A29AAC08D00E3CE65 /* infoSruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = infoSruct.swift; sourceTree = "<group>"; };
+		C3E4457029AAC10800E3CE65 /* FavoriteDatasorce.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteDatasorce.swift; sourceTree = "<group>"; };
+		C3E4457329AAC35000E3CE65 /* FavoriteModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteModelView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -279,6 +285,7 @@
 			isa = PBXGroup;
 			children = (
 				C35142BC29A9099A007E0A77 /* SendInfo.swift */,
+				C3E4456A29AAC08D00E3CE65 /* infoSruct.swift */,
 			);
 			path = SendInfo;
 			sourceTree = "<group>";
@@ -288,6 +295,8 @@
 			children = (
 				C35142C429A9105D007E0A77 /* FavoriteViewControler.swift */,
 				C35142C629A91063007E0A77 /* FavoriteViewControler.storyboard */,
+				C3E4457229AAC33600E3CE65 /* ModelView */,
+				C3E4456D29AAC0E900E3CE65 /* FavoriteDatasorce */,
 			);
 			path = Favarite;
 			sourceTree = "<group>";
@@ -299,6 +308,22 @@
 				C35142CB29A9107A007E0A77 /* UserViewControler.storyboard */,
 			);
 			path = User;
+			sourceTree = "<group>";
+		};
+		C3E4456D29AAC0E900E3CE65 /* FavoriteDatasorce */ = {
+			isa = PBXGroup;
+			children = (
+				C3E4457029AAC10800E3CE65 /* FavoriteDatasorce.swift */,
+			);
+			path = FavoriteDatasorce;
+			sourceTree = "<group>";
+		};
+		C3E4457229AAC33600E3CE65 /* ModelView */ = {
+			isa = PBXGroup;
+			children = (
+				C3E4457329AAC35000E3CE65 /* FavoriteModelView.swift */,
+			);
+			path = ModelView;
 			sourceTree = "<group>";
 		};
 		C3E8B67429A8F74200A2D8C7 /* MainScenes */ = {
@@ -441,12 +466,15 @@
 				C31CC7BA29A8EC430098C545 /* AppDelegate.swift in Sources */,
 				C31CC7BC29A8EC430098C545 /* SceneDelegate.swift in Sources */,
 				C351429C29A8F914007E0A77 /* HomeViewControllerDataSorce.swift in Sources */,
+				C3E4456B29AAC08D00E3CE65 /* infoSruct.swift in Sources */,
+				C3E4457429AAC35000E3CE65 /* FavoriteModelView.swift in Sources */,
 				C35142A129A8FA66007E0A77 /* TableViewCell.swift in Sources */,
 				C35142A629A8FCDF007E0A77 /* UserModuls.swift in Sources */,
 				C35142C529A9105D007E0A77 /* FavoriteViewControler.swift in Sources */,
 				C35142AF29A8FDCB007E0A77 /* Service.swift in Sources */,
 				C35142A929A8FD0A007E0A77 /* MovieResponses.swift in Sources */,
 				C35142BD29A9099A007E0A77 /* SendInfo.swift in Sources */,
+				C3E4457129AAC10800E3CE65 /* FavoriteDatasorce.swift in Sources */,
 				C35142CA29A91075007E0A77 /* UserViewControler.swift in Sources */,
 				C35142B629A90790007E0A77 /* DetalPageViewControler.swift in Sources */,
 				C35142BF29A90F51007E0A77 /* TabBarViewController.swift in Sources */,

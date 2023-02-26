@@ -32,6 +32,9 @@
                     <tabBarItem key="tabBarItem" title="" image="heart" catalog="system" id="fLN-D7-WWs"/>
                     <navigationItem key="navigationItem" id="cjA-h6-7It"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="tableView" destination="1K6-7w-rvF" id="8zo-xC-wwA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ELF-05-v9S" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
