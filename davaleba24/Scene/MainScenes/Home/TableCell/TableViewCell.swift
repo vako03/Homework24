@@ -9,7 +9,7 @@
 import UIKit
 
 class TableViewCell: UITableViewCell {
-    let session = URLSession.shared
+   // let session = URLSession.shared
     
     @IBOutlet private weak var movieImage: UIImageView!
     @IBOutlet private weak var favoriteButton: UIButton!
@@ -17,6 +17,8 @@ class TableViewCell: UITableViewCell {
     @IBOutlet private weak var descriptionLable: UILabel!
     @IBOutlet private weak var realaisDate: UILabel!
     @IBOutlet private weak var ratingStar: UILabel!
+    
+    var _movieImage: UIImage!
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -24,51 +26,58 @@ class TableViewCell: UITableViewCell {
         movieImage.layer.cornerRadius = 20
     }
 
-  func printStars(array: [Double]) {
-  for i in 0..<array.count {
-      if array[i] >= 5 {
-          ratingStar.text = "⭐⭐⭐⭐⭐"
+  private func printStars(array: [Double]) {
+      for i in 0..<array.count {
+          if array[i] >= 5 {
+              ratingStar.text = "⭐⭐⭐⭐⭐"
+          }
+       else if array[i] <= 4 {
+              ratingStar.text = "⭐⭐⭐⭐☆"
+          }
+        else if array[i] <= 3 {
+              ratingStar.text = "⭐⭐⭐☆☆"
+          }
+       else if array[i] <= 2 {
+              ratingStar.text = "⭐⭐☆☆☆"
+          }
+       else if array[i] >= 1 {
+              ratingStar.text = "⭐☆☆☆☆"
+          }
       }
-   else if array[i] <= 4 {
-          ratingStar.text = "⭐⭐⭐⭐☆"
-      }
-    else if array[i] <= 3 {
-          ratingStar.text = "⭐⭐⭐☆☆"
-      }
-   else if array[i] <= 2 {
-          ratingStar.text = "⭐⭐☆☆☆"
-      }
-   else if array[i] >= 1 {
-          ratingStar.text = "⭐☆☆☆☆"
-      }
-  }
 }
-    func satimage(name:String?)  {
+   private func setImage(posterPath: String?)  {
         
-        if let posterPath = name,
-           let url = URL(string: "https://image.tmdb.org/t/p/w500\(posterPath)") {
-            let session = URLSession.shared
-            let task = session.dataTask(with: url) { (data, response, error) in
-                guard let data = data, error == nil else {
-                    print("Error loading image: \(String(describing: error))")
-                    return
-                }
-                let image = UIImage(data: data)
-                DispatchQueue.main.async {
-                    self.movieImage.image = image
-                }
-            }
-            task.resume()
-        }
-
+//        if let posterPath = posterPath,
+//           let url = URL(string: "https://image.tmdb.org/t/p/w500\(posterPath)") {
+//            let session = URLSession.shared
+//            let task = session.dataTask(with: url) { (data, response, error) in
+//                guard let data = data, error == nil else {
+//                    print("Error loading image: \(String(describing: error))")
+//                    return
+//                }
+//                let image = UIImage(data: data)
+//                DispatchQueue.main.async {
+//                    self.movieImage.image = image
+//                }
+//            }
+//            task.resume()
+//        }
+       Service.getMovieImage(from: posterPath!) { [weak self] image in
+           if let image = image {
+               self?.movieImage.image = image
+               self?._movieImage = image
+           }
+           
+       }
     }
-     func configure(wirt Item:MovieInfo){
+    
+     func configure(wirt Item: MovieInfo){
          nameLable.text = Item.title
          descriptionLable.text = Item.overview
          let arr = Item.vote_average
          realaisDate.text = Item.release_date
          self.printStars(array: [arr/2])
-        satimage(name: Item.poster_path)
+         setImage(posterPath: Item.poster_path)
      }
     
     

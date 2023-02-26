@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class HomeViewControlerModelView{
+final class HomeViewControlerModelView {
     private let newsWebsService:Service
     
     var resivedInfo: ( ([MovieInfo]) -> Void)?
@@ -17,7 +17,7 @@ final class HomeViewControlerModelView{
         self.newsWebsService = newsWebsService
     }
     func fachData(){
-        newsWebsService.fetchUsers { (Movie) in
+        newsWebsService.fetchMovies { (Movie) in
             self.resivedInfo!(Movie)
         }
     }

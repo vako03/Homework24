@@ -10,5 +10,5 @@ import Foundation
 
 class DataModel {
     static let shared = DataModel()
-    var items: [(title: String, description: String, imageURL: String, publisheddate: String,poster_path: String)] = []
+    var items: [(id: Int, title: String, description: String, imageURL: String, publisheddate: String, poster_path: String)] = []
 }

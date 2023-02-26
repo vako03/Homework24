@@ -9,10 +9,12 @@
 import UIKit
 
 class UserViewControler: UIViewController {
-     let tab = TabBarViewController()
+    let tab = TabBarViewController()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    
     @IBAction func logOut(_ sender: Any) {
         tab.start()
     }

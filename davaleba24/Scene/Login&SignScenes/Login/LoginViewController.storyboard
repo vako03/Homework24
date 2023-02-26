@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -30,7 +32,7 @@
                                                     <constraint firstAttribute="height" constant="42" id="4xk-Mr-Iv6"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" verticalHuggingPriority="251" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KZd-bG-ren">
                                                 <rect key="frame" x="0.0" y="130" width="374" height="42"/>
@@ -39,7 +41,7 @@
                                                     <constraint firstAttribute="height" constant="42" id="4Rm-zV-Gqi"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES"/>
                                             </textField>
                                         </subviews>
                                     </stackView>
@@ -49,20 +51,20 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="252" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EkO-bE-4cx">
+                                    <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="252" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EkO-bE-4cx">
                                         <rect key="frame" x="39" y="607" width="336" height="64"/>
                                         <color key="backgroundColor" red="0.1075379071" green="0.61291795729999998" blue="0.38436840529999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="LogIn"/>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="252" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zLe-U1-Tsv">
+                                    <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="252" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zLe-U1-Tsv">
                                         <rect key="frame" x="39" y="719" width="336" height="42"/>
                                         <color key="backgroundColor" red="0.1075379071" green="0.61291795729999998" blue="0.38436840529999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="42" id="ILh-QT-NYx"/>
                                         </constraints>
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" title="SignIn"/>
+                                        <state key="normal" title="SignUp"/>
                                         <connections>
                                             <action selector="onRegister:" destination="iIz-WV-7YV" eventType="touchUpInside" id="lOX-jz-6rS"/>
                                         </connections>
@@ -71,6 +73,7 @@
                                         <rect key="frame" x="76" y="205" width="261" height="105"/>
                                     </imageView>
                                 </subviews>
+                                <viewLayoutGuide key="safeArea" id="acB-ay-Hdn"/>
                                 <color key="backgroundColor" red="0.037102330480000001" green="0.089497216049999995" blue="0.093240909280000006" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="acB-ay-Hdn" firstAttribute="bottom" secondItem="zLe-U1-Tsv" secondAttribute="bottom" constant="101" id="3Pv-8t-tIw"/>
@@ -92,11 +95,10 @@
                                     <constraint firstItem="TCC-SE-uWa" firstAttribute="top" secondItem="m1I-og-3ni" secondAttribute="bottom" constant="43" id="ysV-2P-D5k"/>
                                     <constraint firstItem="acB-ay-Hdn" firstAttribute="trailing" secondItem="TCC-SE-uWa" secondAttribute="trailing" constant="77" id="zYh-Yg-kTq"/>
                                 </constraints>
-                                <viewLayoutGuide key="safeArea" id="acB-ay-Hdn"/>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="2AM-rN-bCc"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
                         <outlet property="loginButton" destination="EkO-bE-4cx" id="3ZL-02-eQU"/>
@@ -112,5 +114,8 @@
     </scenes>
     <resources>
         <image name="movie" width="16" height="16"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

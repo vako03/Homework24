@@ -13,6 +13,7 @@ class HomeViewController: UIViewController {
     var userService: Service?
     @IBOutlet weak var spiner: UIActivityIndicatorView!
     @IBOutlet private weak var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.hidesBackButton = true
@@ -26,6 +27,7 @@ class HomeViewController: UIViewController {
         datasorce = HomeViewControllerDataSorce(with: tableView)
         datasorce?.delegate = self
     }
+    
     func viewmodel(){
         userService = Service.init(webservismanager: WebServiceManager())
         modelView = HomeViewControlerModelView(newsWebsService: userService!)
@@ -37,9 +39,12 @@ class HomeViewController: UIViewController {
     }
 
 }
-extension HomeViewController: HomeViewControlerDataSorceDelegate{
-    func didSelectRow(indexPath: IndexPath) {
+
+extension HomeViewController: HomeViewControlerDataSorceDelegate {
+    func didSelectRow(movie: MovieInfo, cell: TableViewCell) {
         let vc = UIStoryboard(name: "DetalPageViewControler", bundle: nil).instantiateViewController(identifier: "DetalPageViewControler") as! DetalPageViewControler
+        vc.movieInfo = movie
+        vc.tableViewCell = cell
         navigationController?.pushViewController(vc, animated: true)
     }
 }

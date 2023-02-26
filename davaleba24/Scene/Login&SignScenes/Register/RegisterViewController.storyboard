@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -28,7 +30,7 @@
                                                     <constraint firstAttribute="height" constant="42" id="7GI-rG-D7d"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="O2l-Tm-PvO">
                                                 <rect key="frame" x="0.0" y="80" width="374" height="42"/>
@@ -36,11 +38,11 @@
                                                     <constraint firstAttribute="height" constant="42" id="Nad-6Y-rCz"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                                             </textField>
                                         </subviews>
                                     </stackView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n8E-Qg-l9W">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n8E-Qg-l9W">
                                         <rect key="frame" x="80" y="745" width="254" height="40"/>
                                         <color key="backgroundColor" red="0.071736862390000003" green="0.087204649879999999" blue="0.11600964480000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
@@ -50,7 +52,7 @@
                                         <state key="normal" title="Button"/>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create Account" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ues-qD-L1Q">
-                                        <rect key="frame" x="80" y="86" width="254" height="42"/>
+                                        <rect key="frame" x="80" y="90" width="254" height="42"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="42" id="Mii-h2-Nr7"/>
                                         </constraints>
@@ -59,9 +61,10 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="movie-icon-app" translatesAutoresizingMaskIntoConstraints="NO" id="2Yu-D1-9gb">
-                                        <rect key="frame" x="80" y="202" width="254" height="143"/>
+                                        <rect key="frame" x="80" y="206" width="254" height="139"/>
                                     </imageView>
                                 </subviews>
+                                <viewLayoutGuide key="safeArea" id="VGe-kZ-LO4"/>
                                 <color key="backgroundColor" red="0.15944014579999999" green="0.2450819588" blue="0.21236018970000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="vju-zT-ohp" firstAttribute="centerX" secondItem="2Yu-D1-9gb" secondAttribute="centerX" id="2Za-I0-Muf"/>
@@ -78,11 +81,10 @@
                                     <constraint firstItem="vju-zT-ohp" firstAttribute="centerX" secondItem="ues-qD-L1Q" secondAttribute="centerX" id="qul-WY-Upf"/>
                                     <constraint firstItem="vju-zT-ohp" firstAttribute="leading" secondItem="VGe-kZ-LO4" secondAttribute="leading" constant="20" id="tUC-EN-Eqq"/>
                                 </constraints>
-                                <viewLayoutGuide key="safeArea" id="VGe-kZ-LO4"/>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="VJD-kb-yYo"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
                         <outlet property="passwordTextField" destination="O2l-Tm-PvO" id="b5q-jD-3Xh"/>
@@ -97,5 +99,8 @@
     </scenes>
     <resources>
         <image name="movie-icon-app" width="16" height="16"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

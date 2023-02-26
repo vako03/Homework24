@@ -7,10 +7,12 @@
 //
 
 import UIKit
-protocol HomeViewControlerDataSorceDelegate{
-    func didSelectRow(indexPath:IndexPath)
+
+protocol HomeViewControlerDataSorceDelegate {
+    func didSelectRow(movie: MovieInfo, cell: TableViewCell)
 }
-class HomeViewControllerDataSorce: NSObject{
+
+class HomeViewControllerDataSorce: NSObject {
     var delegate: HomeViewControlerDataSorceDelegate?
     var tableView = UITableView()
     var movie = [MovieInfo]()
@@ -24,7 +26,7 @@ class HomeViewControllerDataSorce: NSObject{
     }
     
 }
-extension HomeViewControllerDataSorce: UITableViewDataSource{
+extension HomeViewControllerDataSorce: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         movie.count
     }
@@ -37,11 +39,14 @@ extension HomeViewControllerDataSorce: UITableViewDataSource{
     
     
 }
-extension HomeViewControllerDataSorce: UITableViewDelegate{
-    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
-        delegate?.didSelectRow(indexPath: indexPath)
+extension HomeViewControllerDataSorce: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let Info = movie[indexPath.row]
-        DataModel.shared.items = [(title:Info.title, description: Info.overview, imageURL: Info.overview, publisheddate:Info.release_date, poster_path: "https://image.tmdb.org/t/p/w500\(Info.poster_path)")]
-              }
+        DataModel.shared.items = [(id: Info.id ,title: Info.title, description: Info.overview, imageURL: Info.overview, publisheddate: Info.release_date, poster_path: "https://image.tmdb.org/t/p/w500\(Info.poster_path)")]
+        let cell = tableView.cellForRow(at: indexPath) as! TableViewCell
+        delegate?.didSelectRow(movie: Info, cell: cell)
+        
+        }
+        
     }
 
